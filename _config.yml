@@ -22,7 +22,9 @@ title: John's Website
 email: dontcontactme@gmail.com
 description: >- 
   Welcome to my page
+
   I'm a 30 year old man
+  
   who's a hipster dork
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
