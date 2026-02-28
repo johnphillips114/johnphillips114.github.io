@@ -5,7 +5,7 @@ author: John Phillips
 
 # URL settings
 baseurl: "" # subpath, e.g. /blog for GitHub project pages
-url: "" # base hostname, e.g. https://username.github.io
+url: "https://johnphillips114.github.io" # base hostname, e.g. https://username.github.io
 
 # Build settings
 markdown: kramdown
