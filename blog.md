@@ -6,7 +6,7 @@ permalink: /blog/
 
 # Blog
 
-TBD :)
+More info to come :)
 
 [Subscribe via RSS]({{ "/feed.xml" | relative_url }})
 
