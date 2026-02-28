@@ -1,0 +1,28 @@
+# Site settings
+title: John Phillips
+description: A minimal personal website
+author: John Phillips
+
+# URL settings
+baseurl: "" # subpath, e.g. /blog for GitHub project pages
+url: "" # base hostname, e.g. https://username.github.io
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# SASS settings
+sass:
+  style: compressed
+  sass_dir: _sass
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md

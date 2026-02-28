@@ -1,0 +1,268 @@
+// Container
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $spacing-unit * 2;
+  flex: 1;
+}
+
+// Header and Navigation
+.site-header {
+  background-color: darken($color-background, 3%);
+  border-bottom: 1px solid lighten($color-background, 10%);
+  padding: $spacing-unit;
+}
+
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $color-accent;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-accent-hover;
+  }
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: $color-text;
+    position: relative;
+    transition: background-color 0.2s ease;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $color-text;
+      left: 0;
+      transition: transform 0.2s ease;
+    }
+
+    &::before {
+      top: -8px;
+    }
+
+    &::after {
+      top: 8px;
+    }
+  }
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: $spacing-unit * 2;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: darken($color-background, 3%);
+    padding: $spacing-unit;
+    gap: 0;
+    border-bottom: 1px solid lighten($color-background, 10%);
+
+    &.active {
+      display: flex;
+    }
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      padding: $spacing-unit * 0.75;
+    }
+  }
+
+  a {
+    color: $color-text;
+
+    &:hover,
+    &.active {
+      color: $color-accent;
+    }
+  }
+}
+
+// Make header position relative for mobile menu
+.site-header {
+  position: relative;
+}
+
+// Footer
+.site-footer {
+  background-color: darken($color-background, 3%);
+  border-top: 1px solid lighten($color-background, 10%);
+  padding: $spacing-unit * 2;
+  text-align: center;
+  color: $color-muted;
+}
+
+// Blog listing
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-list-item {
+  margin-bottom: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 2;
+  border-bottom: 1px solid lighten($color-background, 10%);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.post-list-title {
+  margin-bottom: $spacing-unit * 0.5;
+
+  a {
+    color: $color-accent;
+
+    &:hover {
+      color: $color-accent-hover;
+    }
+  }
+}
+
+.post-list-meta {
+  color: $color-muted;
+  font-size: 0.9rem;
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+.post-list-excerpt {
+  color: $color-text;
+}
+
+// Single post
+.post-header {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.post-title {
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+.post-date {
+  color: $color-muted;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.post-content {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.post-footer {
+  padding-top: $spacing-unit * 2;
+  border-top: 1px solid lighten($color-background, 10%);
+}
+
+// Resume styles
+.resume-section {
+  margin-bottom: $spacing-unit * 3;
+}
+
+.resume-section h2 {
+  border-bottom: 2px solid $color-accent;
+  padding-bottom: $spacing-unit * 0.5;
+  margin-bottom: $spacing-unit * 1.5;
+}
+
+.resume-item {
+  margin-bottom: $spacing-unit * 2;
+}
+
+.resume-item-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-unit * 0.5;
+
+  @media (max-width: $mobile-breakpoint) {
+    flex-direction: column;
+  }
+}
+
+.resume-item-title {
+  font-weight: bold;
+  color: $color-text;
+}
+
+.resume-item-date {
+  color: $color-muted;
+  font-size: 0.9rem;
+}
+
+.resume-item-subtitle {
+  color: $color-accent;
+  margin-bottom: $spacing-unit * 0.5;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-unit * 0.5;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-tag {
+  background-color: lighten($color-background, 10%);
+  color: $color-accent;
+  padding: $spacing-unit * 0.25 $spacing-unit * 0.75;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+// Home page
+.intro {
+  margin-bottom: $spacing-unit * 3;
+}
+
+.intro-title {
+  font-size: 3rem;
+
+  @media (max-width: $mobile-breakpoint) {
+    font-size: 2rem;
+  }
+}
+
+.intro-subtitle {
+  font-size: 1.25rem;
+  color: $color-muted;
+  margin-bottom: $spacing-unit * 2;
+}
