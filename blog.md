@@ -24,6 +24,7 @@ More info to come :)
 {% endfor %}
 </ul>
 
+
 {% if site.posts.size == 0 %}
 <p>No posts yet. Check back soon!</p>
 {% endif %}
